@@ -4,6 +4,9 @@ import logo from "../assets/logo.png"
 export function Navbar() {
     const [hiddenNavbar, setHiddenNavbar] = useState(false)
 
+    const scrollToSection = (id: string) => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    };
 
     return (
         <div className="bg-amber-400 absolute top-0 w-full z-50">
@@ -18,9 +21,17 @@ export function Navbar() {
                 <img src={logo} alt="EAA Constructions" className="w-14 sm:w-24 bg-customWhite my-1 p-1"/>
                 
                 <div className="hidden lg:flex gap-32 font-medium text-2xl">
-                    <a href="#services">Services</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact Us</a>
+<button onClick={() => scrollToSection('services')}>
+  Services
+</button>
+
+<button onClick={() => scrollToSection('about')}>
+  About
+</button>
+
+<button onClick={() => scrollToSection('contact')}>
+  Contact
+</button>
                 </div>
 
                 <a href="#contact">
