@@ -4,8 +4,6 @@ import { App } from "./App.tsx";
 import { createHashRouter , RouterProvider } from "react-router-dom";
 import './index.css'
 
-import { Services } from './components/Services.tsx';
-import { About } from './components/About.tsx';
 import { Hvac } from './components/Pages/Hvac.tsx';
 import { Drywall } from './components/Pages/Drywall.tsx';
 import { Electric } from './components/Pages/Electric.tsx';
