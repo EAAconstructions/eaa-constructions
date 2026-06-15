@@ -21,21 +21,31 @@ export function Navbar() {
                 <img src={logo} alt="EAA Constructions" className="w-14 sm:w-24 bg-customWhite my-1 p-1"/>
                 
                 <div className="hidden lg:flex gap-32 font-medium text-2xl">
-<button onClick={() => scrollToSection('services')}>
-  Services
-</button>
+                    <button 
+                        className="cursor-pointer"
+                        onClick={() => scrollToSection('services')}
+                    >
+                    Services
+                    </button>
 
-<button onClick={() => scrollToSection('about')}>
-  About
-</button>
+                    <button 
+                        className="cursor-pointer"
+                        onClick={() => scrollToSection('about')}
+                    >
+                    About
+                    </button>
 
-<button onClick={() => scrollToSection('contact')}>
-  Contact
-</button>
+                    <button 
+                        className="cursor-pointer"
+                        onClick={() => scrollToSection('contact')}
+                    >
+                    Contact
+                    </button>
                 </div>
 
                 <a href="#contact">
-                    <button 
+                    <button
+                        onClick={() => scrollToSection('contact')}
                         className="bg-customWhite text-xl px-4 py-2 rounded-lg hover:opacity-80 cursor-pointer">
                         Get Quote
                     </button>
@@ -45,9 +55,33 @@ export function Navbar() {
                 {hiddenNavbar && 
                     <div className="flex flex-col lg:hidden gap-8 text-sm font-medium align-center text-center py-4">
                             <a href="/" onClick={() => setHiddenNavbar(() => !hiddenNavbar)}>Home</a>
-                            <a href="#services" onClick={() => setHiddenNavbar(() => !hiddenNavbar)}>Services</a>
-                            <a href="#about" onClick={() => setHiddenNavbar(() => !hiddenNavbar)}>About</a>
-                            <a href="#contact" onClick={() => setHiddenNavbar(() => !hiddenNavbar)}>Contact</a>
+                            
+                            <button 
+                                onClick={() => {
+                                    setHiddenNavbar(() => !hiddenNavbar)
+                                    scrollToSection('services')
+                                }}
+                            >
+                                Services
+                            </button>
+
+                            <button 
+                                onClick={() => {
+                                    scrollToSection('about')
+                                    setHiddenNavbar(() => !hiddenNavbar)
+                                }}
+                            >
+                                About
+                            </button>
+                            
+                            <button 
+                                onClick={() => {
+                                    scrollToSection('contact')
+                                    setHiddenNavbar(() => !hiddenNavbar)
+                                }}
+                            >
+                                Contact
+                            </button>
                     </div>
                 }
             </div>
