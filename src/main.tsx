@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { App } from "./App.tsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter , RouterProvider } from "react-router-dom";
 import './index.css'
 
 import { Services } from './components/Services.tsx';
@@ -13,16 +13,16 @@ import { Painting } from './components/Pages/Painting.tsx';
 import { Plumbing } from './components/Pages/Plumbing.tsx';
 import { Tiling } from './components/Pages/Tiling.tsx';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {path: '/', element: <App />},
   {path: '/services', element: <Services />},
   {path: '/about', element: <About />},
-  {path: '/Plumbing', element: <Plumbing />},
-  {path: '/Electric', element: <Electric />},
-  {path: '/HVAC', element: <Hvac />},
-  {path: '/Tiling', element: <Tiling />},
-  {path: '/Painting', element: <Painting />},
-  {path: '/Drywall', element: <Drywall />},
+  {path: '/plumbing', element: <Plumbing />},
+  {path: '/electric', element: <Electric />},
+  {path: '/hvac', element: <Hvac />},
+  {path: '/tiling', element: <Tiling />},
+  {path: '/painting', element: <Painting />},
+  {path: '/drywall', element: <Drywall />},
 ])
 
 createRoot(document.getElementById('root')!).render(
