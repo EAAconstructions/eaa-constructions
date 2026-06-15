@@ -15,8 +15,6 @@ import { Tiling } from './components/Pages/Tiling.tsx';
 
 const router = createHashRouter([
   {path: '/', element: <App />},
-  {path: '/service', element: <Services />},
-  {path: '/about', element: <About />},
   {path: '/plumbing', element: <Plumbing />},
   {path: '/electric', element: <Electric />},
   {path: '/hvac', element: <Hvac />},
