@@ -43,15 +43,14 @@ export function Navbar() {
                     </button>
                 </div>
 
-                <a href="#contact">
-                    <button
-                        onClick={() => scrollToSection('contact')}
-                        className="bg-customWhite text-xl px-4 py-2 rounded-lg hover:opacity-80 cursor-pointer">
-                        Get Quote
-                    </button>
-                </a>
-            
+
+                <button
+                    onClick={() => scrollToSection('contact')}
+                    className="bg-customWhite text-xl px-4 py-2 rounded-lg hover:opacity-80 cursor-pointer">
+                    Get Quote
+                </button>
             </div>
+
                 {hiddenNavbar && 
                     <div className="flex flex-col lg:hidden gap-8 text-sm font-medium align-center text-center py-4">
                             <a href="/" onClick={() => setHiddenNavbar(() => !hiddenNavbar)}>Home</a>
@@ -84,6 +83,6 @@ export function Navbar() {
                             </button>
                     </div>
                 }
-            </div>
+        </div>
     );
 };
