@@ -13,11 +13,23 @@ export function App() {
   return (
     <>
       <Hero />
+
       <Navbar />
-      <Services />
-      <About />
+
+      <section id="services">
+        <Services />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
       <Reviews />
-      <Contact />
+      
+      <section id="contact">
+        <Contact />
+      </section>
+
       <Footer />
     </>
   );
