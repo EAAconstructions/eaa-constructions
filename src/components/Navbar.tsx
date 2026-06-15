@@ -6,7 +6,7 @@ export function Navbar() {
 
 
     return (
-        <div className="bg-amber-400 absolute top-0 w-full z-100">
+        <div className="bg-amber-400 absolute top-0 w-full z-50">
             <div className="px-4 flex justify-between items-center">
                 <button 
                     onClick={() => setHiddenNavbar(() => !hiddenNavbar)} 
@@ -33,7 +33,7 @@ export function Navbar() {
             </div>
                 {hiddenNavbar && 
                     <div className="flex flex-col lg:hidden gap-8 text-sm font-medium align-center text-center py-4">
-                            <a href="#" onClick={() => setHiddenNavbar(() => !hiddenNavbar)}>Home</a>
+                            <a href="/" onClick={() => setHiddenNavbar(() => !hiddenNavbar)}>Home</a>
                             <a href="#services" onClick={() => setHiddenNavbar(() => !hiddenNavbar)}>Services</a>
                             <a href="#about" onClick={() => setHiddenNavbar(() => !hiddenNavbar)}>About</a>
                             <a href="#contact" onClick={() => setHiddenNavbar(() => !hiddenNavbar)}>Contact</a>

@@ -18,7 +18,7 @@ const stagger = {
 
 export function Services() {
     return (
-        <section id="services" className=" scroll-mt-24 bg-customGray">
+        <section id="services" className="scroll-mt-24 bg-customGray">
 
                 <div className="max-w-800 mx-auto text-center py-4">
                     <h2 className="text-4xl font-bold pt-12">
