@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 export function Hero() {
     return (
         <>
-            <main className="relative">
+            <main id='home' className="relative w-full">
                     <motion.img
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}

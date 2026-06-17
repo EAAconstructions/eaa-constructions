@@ -14,8 +14,8 @@ export function App() {
   return (
     <>
       <Toaster position="bottom-right"/>
-      <Hero />
       <Navbar />
+      <Hero />
       <section id="services">
         <Services />
       </section>

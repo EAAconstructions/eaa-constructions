@@ -4,20 +4,20 @@ import { motion } from "framer-motion";
 export  function AboutCard({image, title}: {image: string, title: string}) {
   return (
 
-    <div className="flex flex-col justify-between shadow rounded-2xl hover:shadow-xl">
+    <div className="flex flex-col justify-between shadow-xl rounded-2xl">
 
         <motion.img
           src={image}
           className="rounded-t-2xl w-full h-[70%]"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         />
 
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >

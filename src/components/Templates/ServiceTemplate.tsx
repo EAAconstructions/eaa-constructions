@@ -8,11 +8,12 @@ type Props = {
     images: string[]
 }
 
-    const scrollToSection = (id: string) => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    };
-
 export function ServiceTemplate({title, description, images}: Props) {
+
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+  
   return (
     <div 
       id="homeButton"

@@ -9,16 +9,16 @@ export function Navbar() {
     };
 
     return (
-        <div className="bg-amber-400 absolute top-0 w-full z-50">
+        <div className="bg-amber-400 w-full">
             <div className="px-4 flex justify-between items-center">
                 <button 
                     onClick={() => setHiddenNavbar(() => !hiddenNavbar)} 
-                    className="flex lg:hidden cursor-pointer rounded-4xl hover:bg-gray-400 px-3 py-2 font-medium"
+                    className="flex lg:hidden cursor-pointer rounded-4xl hover:bg-gray-400 px-3 py-2 text-2xl"
                 >
                     ☰
                 </button>
                 
-                <img src={logo} alt="EAA Constructions" className="w-14 sm:w-24 bg-customWhite my-1 p-1"/>
+                <img src={logo} alt="EAA Constructions" className="w-14 sm:w-24 my-1 p-1"/>
                 
                 <div className="hidden lg:flex gap-32 font-medium text-2xl">
                     <button 
@@ -46,7 +46,7 @@ export function Navbar() {
 
                 <button
                     onClick={() => scrollToSection('contact')}
-                    className="bg-customWhite text-xl px-4 py-2 rounded-lg hover:opacity-80 cursor-pointer">
+                    className="bg-customWhite text-md px-2 py-2 rounded-lg hover:opacity-80 cursor-pointer">
                     Get Quote
                 </button>
             </div>

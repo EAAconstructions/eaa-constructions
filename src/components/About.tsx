@@ -8,7 +8,7 @@ import { AboutCard } from "./cards/AboutCard";
 
 export function About() {
   return (
-    <section id="about" className="py-24 bg-customWhite">
+    <section id="about" className="py-24 bg-customWhite w-full">
 
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-6">About</h2>
