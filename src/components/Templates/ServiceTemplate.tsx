@@ -8,13 +8,20 @@ type Props = {
     images: string[]
 }
 
+    const scrollToSection = (id: string) => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    };
+
 export function ServiceTemplate({title, description, images}: Props) {
   return (
-    <div className=" bg-customGray px-4">
+    <div 
+      id="homeButton"
+      className="bg-customGray px-4" onLoad={() => scrollToSection('homeButton')}>
       <div className="container mx-auto">
         <Link to={"/"}>
 
-          <button 
+          <button
+            
             className="md:absolute mt-4 md:mt-0 md:top-8 bg-amber-400 px-4 py-2 rounded-lg hover:opacity-80 cursor-pointer "
           >
             {`< Back`}

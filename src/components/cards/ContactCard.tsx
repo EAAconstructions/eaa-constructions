@@ -1,12 +1,15 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'
-  
+import toast from "react-hot-toast";
 
 export function ContactCard() {
+  const [isSending, setIsSending] = useState(false);
 
-const form = useRef<HTMLFormElement>(null);
+  const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent) => {
+    setIsSending(true)
+
     e.preventDefault();
 
     if (!form.current) return;
@@ -20,12 +23,14 @@ const form = useRef<HTMLFormElement>(null);
       )
       .then(
         () => {
-          alert("Message sent successfully!");
+          setIsSending(false)
+          toast.success('Message sent successfully!');
           form.current?.reset();
         },
         (error) => {
+
           console.log(error.text);
-          alert("Failed to send message.");
+          toast.error('Failed to send message.')
         }
       );
   };
@@ -68,11 +73,12 @@ const form = useRef<HTMLFormElement>(null);
           required
         />
 
-        <button 
+        <button
           type="submit"
-          className="bg-black text-white py-3 rounded-lg font-medium hover:opacity-80"
+          disabled={isSending}
+          className="bg-black text-white py-3 rounded-lg disabled:opacity-50 cursor-pointer disabled:cursor-default"
         >
-          Submit
+          {isSending ? "Sending..." : "Submit"}
         </button>
       </form>
   )
